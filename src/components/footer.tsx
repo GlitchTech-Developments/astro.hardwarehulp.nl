@@ -1,4 +1,4 @@
-﻿import { BsEnvelope, BsFacebook, BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs"
+﻿import { EnvelopeAt, Facebook, Instagram, Linkedin, Whatsapp } from "react-bootstrap-icons"
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex w-full items-center justify-center gap-4 align-middle">
               Whatsapp{" "}
               <a href="https://wa.me/31642981933">
-                <BsWhatsapp
+                <Whatsapp
                   className="icon"
                   style={{
                     color: "#ffa600",
@@ -21,7 +21,7 @@ const Footer = () => {
               </a>
               E-mail{" "}
               <a href="mailto://jesse@hardwarehulp.nl">
-                <BsEnvelope
+                <EnvelopeAt
                   className="icon"
                   style={{
                     color: "#ffa600",
@@ -91,7 +91,7 @@ const Footer = () => {
                       Icon?.classList.remove("fill-brand")
                     }}
                   >
-                    <BsInstagram id="ig-icon" className="icon mb-1" />
+                    <Instagram id="ig-icon" className="icon mb-1" />
                     <span>Instagram</span>
                   </a>
                 </li>
@@ -108,7 +108,7 @@ const Footer = () => {
                       Icon?.classList.remove("fill-brand")
                     }}
                   >
-                    <BsFacebook id="fb-icon" className="icon mb-1" />
+                    <Facebook id="fb-icon" className="icon mb-1" />
                     Facebook
                   </a>
                 </li>
@@ -125,7 +125,7 @@ const Footer = () => {
                       Icon?.classList.remove("fill-brand")
                     }}
                   >
-                    <BsLinkedin id="li-icon" className="icon mb-1" />
+                    <Linkedin id="li-icon" className="icon mb-1" />
                     Linkedin
                   </a>
                 </li>

@@ -1,4 +1,4 @@
-﻿import { BsLifePreserver, BsSearch, BsWrench } from "react-icons/bs"
+﻿import { LifePreserver, Search, Wrench } from "react-bootstrap-icons"
 
 const HomeContent = () => {
   return (
@@ -18,7 +18,7 @@ const HomeContent = () => {
               <a href="/diensten#com-mobile" style={{ textDecoration: "none" }}>
                 <div className="content btn-highlights">
                   <span className="flex w-full flex-col items-center justify-center gap-4">
-                    <BsWrench className="icon" style={{ color: "#ffa600" }} />
+                    <Wrench className="icon" style={{ color: "#ffa600" }} />
                     <h3>Computer op maat</h3>
                   </span>
                   <p className="text-gray-700">
@@ -32,7 +32,7 @@ const HomeContent = () => {
               <a style={{ textDecoration: "none" }} href="/diensten#com-ondersteuning">
                 <div className="content btn-highlights">
                   <span className="flex w-full flex-col items-center justify-center gap-4">
-                    <BsLifePreserver className="icon" style={{ color: "#ffa600" }} />
+                    <LifePreserver className="icon" style={{ color: "#ffa600" }} />
                     <h3>Ondersteuning</h3>
                   </span>
                   <p className="text-gray-700">
@@ -46,7 +46,7 @@ const HomeContent = () => {
               <a href="/diensten#com-advies" style={{ textDecoration: "none" }}>
                 <div className="content btn-highlights">
                   <span className="flex w-full flex-col items-center justify-center gap-4">
-                    <BsSearch className="icon" style={{ color: "#ffa600" }} />
+                    <Search className="icon" style={{ color: "#ffa600" }} />
                     <h3>Aankoop advies</h3>
                   </span>
                   <p className="text-gray-700">
