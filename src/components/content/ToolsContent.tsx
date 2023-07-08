@@ -41,12 +41,12 @@
 //               }}
 //             >
 //               <a
-//                 href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl"
+//                 href="https://freetools.seobility.net/en/seocheck/astro.hardwarehulp.nl"
 //                 target="_blank"
 //                 rel="noreferrer"
 //               >
 //                 <Image
-//                   src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
+//                   src="https://freetools.seobility.net/widget/widget.png?url=astro.hardwarehulp.nl"
 //                   alt="Seobility Score of hardwarehulp.nl"
 //                   height={80}
 //                   width={80}
