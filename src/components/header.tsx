@@ -1,13 +1,4 @@
-﻿import { useEffect, useState } from "react"
-
-const Header = () => {
-  const [pathName, setPathname] = useState<string | null>(null)
-  const Location = typeof window !== "undefined" ? window.location : undefined
-
-  useEffect(() => {
-    console.log(Location)
-  })
-
+﻿const Header = () => {
   return (
     <header id="header">
       <a className="logo no-select" href="/">
@@ -19,7 +10,6 @@ const Header = () => {
           width={70}
           loading="eager"
         />
-        {pathName?.toString()}
       </a>
       <nav className="no-select font-semibold" style={{ color: "rgba(255,255,255, 0.85)" }}>
         <a className="nav-link" rel="canonical" href="/">
@@ -38,5 +28,4 @@ const Header = () => {
     </header>
   )
 }
-
 export default Header

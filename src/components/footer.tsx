@@ -1,6 +1,21 @@
 ﻿import { EnvelopeAt, Facebook, Instagram, Linkedin, Whatsapp } from "react-bootstrap-icons"
 
 const Footer = () => {
+  const changeIconHoverEffect = (iconID: string, action: "remove" | "add") => {
+    const Icon = document.getElementById(iconID)
+
+    switch (action) {
+      case "add": {
+        Icon?.classList.add("fill-brand")
+        return
+      }
+      case "remove": {
+        Icon?.classList.remove("fill-brand")
+        return
+      }
+    }
+  }
+
   return (
     <>
       <section className="wrapper no-select">
@@ -82,14 +97,9 @@ const Footer = () => {
                   <a
                     href="https://www.instagram.com/hardwarehulp/"
                     className="flex items-center"
-                    onMouseEnter={() => {
-                      const Icon = document.getElementById("ig-icon")
-                      Icon?.classList.add("fill-brand")
-                    }}
-                    onMouseLeave={() => {
-                      const Icon = document.getElementById("ig-icon")
-                      Icon?.classList.remove("fill-brand")
-                    }}
+                    onMouseEnter={() => changeIconHoverEffect("ig-icon", "add")}
+                    onMouseLeave={() => changeIconHoverEffect("ig-icon", "remove")}
+                    onClick={() => changeIconHoverEffect("ig-icon", "add")}
                   >
                     <Instagram id="ig-icon" className="icon mb-1" />
                     <span>Instagram</span>
@@ -99,14 +109,9 @@ const Footer = () => {
                   <a
                     href="https://www.facebook.com/hardwarehulp"
                     className="flex items-center"
-                    onMouseEnter={() => {
-                      const Icon = document.getElementById("fb-icon")
-                      Icon?.classList.add("fill-brand")
-                    }}
-                    onMouseLeave={() => {
-                      const Icon = document.getElementById("fb-icon")
-                      Icon?.classList.remove("fill-brand")
-                    }}
+                    onMouseEnter={() => changeIconHoverEffect("fb-icon", "add")}
+                    onMouseLeave={() => changeIconHoverEffect("fb-icon", "remove")}
+                    onClick={() => changeIconHoverEffect("fb-icon", "add")}
                   >
                     <Facebook id="fb-icon" className="icon mb-1" />
                     Facebook
@@ -116,14 +121,9 @@ const Footer = () => {
                   <a
                     href="https://www.linkedin.com/company/hardwarehulp"
                     className="flex items-center"
-                    onMouseEnter={() => {
-                      const Icon = document.getElementById("li-icon")
-                      Icon?.classList.add("fill-brand")
-                    }}
-                    onMouseLeave={() => {
-                      const Icon = document.getElementById("li-icon")
-                      Icon?.classList.remove("fill-brand")
-                    }}
+                    onMouseEnter={() => changeIconHoverEffect("li-icon", "add")}
+                    onMouseLeave={() => changeIconHoverEffect("li-icon", "remove")}
+                    onClick={() => changeIconHoverEffect("li-icon", "add")}
                   >
                     <Linkedin id="li-icon" className="icon mb-1" />
                     Linkedin

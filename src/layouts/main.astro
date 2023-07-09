@@ -7,12 +7,18 @@ import PrefetchHead from "@/components/router-head/prefetch-head.astro"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
-const { title } = Astro.props
+const { title, desc } = Astro.props
 ---
 
 <html lang="nl-NL">
   <head>
     <title>{title} | HardwareHulp - IT hulp aan huis in Kampen, Overijssel</title>
+    <meta
+      name="description"
+      content={desc
+        ? desc
+        : "IT gerelateerde hulp aan huis in Kampen, Overijssel. Computers gebouwd op maat, technische ondersteuning en meer! Neem contact op!"}
+    />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <MetaHead />
