@@ -25,7 +25,7 @@ const { title, desc } = Astro.props
     <PrefetchHead />
   </head>
   <body>
-    <Header client:idle />
+    <Header />
     <slot />
     <Footer client:visible />
   </body>
