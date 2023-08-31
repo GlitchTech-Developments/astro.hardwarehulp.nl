@@ -18,10 +18,10 @@ const ServicesContent = () => {
       <div className="inner">
         <div className="content borders no-select" id="computeropmaat">
           <>
-            <table className="no-mobile">
+            <table className="no-mobile pb-2">
               <tbody id="dienst-table">
                 <tr>
-                  <td>
+                  <td id="com-computer">
                     <img src={Computer256} alt="Computer op maat" loading="eager" />
                   </td>
                   <td colSpan={2} className="content-dienst">
@@ -36,7 +36,7 @@ const ServicesContent = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td id="com-installatie">
                     <img src={Install256} alt="Installatie apparatuur" loading="eager" />
                   </td>
                   <td colSpan={2} className="content-dienst">
@@ -51,8 +51,8 @@ const ServicesContent = () => {
                     advies&quot; dienst die ik aanbied.
                   </td>
                 </tr>
-                <tr id="aankoopadvies">
-                  <td>
+                <tr>
+                  <td id="com-advies">
                     <img src={Research256} alt="aankoopadvies" loading="eager" />
                   </td>
                   <td colSpan={2} className="content-dienst">
@@ -66,8 +66,8 @@ const ServicesContent = () => {
                     professioneel werk als 3D modelering en en animatie.
                   </td>
                 </tr>
-                <tr id="ondersteuning">
-                  <td>
+                <tr>
+                  <td id="com-ondersteuning">
                     <img src={Support256} alt="Technische ondersteuning" loading="eager" />
                   </td>
                   <td colSpan={2} className="content-dienst">
@@ -81,7 +81,7 @@ const ServicesContent = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td id="com-upgrades">
                     <img src={Upgrades256} alt="Hardware upgrades" loading="eager" />
                   </td>
                   <td colSpan={2} className="content-dienst">
@@ -97,12 +97,11 @@ const ServicesContent = () => {
                 </tr>
               </tbody>
             </table>
-            <div style={{ padding: ".05rem" }} />
           </>
           <>
-            <table id="com-mobile" className="pb-2" aria-hidden="true">
+            <table id="com-mobile" className="pb-2">
               <tbody id="dienst-table-mob">
-                <tr>
+                <tr id="mob-computer">
                   <td>
                     <img src={ComputerMob} alt="Computer op maat" loading="eager" />
                   </td>
@@ -119,7 +118,7 @@ const ServicesContent = () => {
                     mogelijk van dienst te kunnen zijn.
                   </td>
                 </tr>
-                <tr>
+                <tr id="mob-installatie">
                   <td>
                     <img src={InstallMob} alt="Installatie apparatuur" loading="eager" />
                   </td>
@@ -137,7 +136,7 @@ const ServicesContent = () => {
                     advies&quot; dienst die ik aanbied.
                   </td>
                 </tr>
-                <tr id="com-advies">
+                <tr id="mob-advies">
                   <td>
                     <img
                       src={ResearchMob}
@@ -158,7 +157,7 @@ const ServicesContent = () => {
                     professioneel werk als 3D modelering en en animatie.
                   </td>
                 </tr>
-                <tr id="com-ondersteuning">
+                <tr id="mob-ondersteuning">
                   <td>
                     <img src={SupportMob} alt="Technische ondersteuning" loading="eager" />
                   </td>
@@ -174,7 +173,7 @@ const ServicesContent = () => {
                     zo spoedig mogelijk uw computer weer naar behoren gebruiken.
                   </td>
                 </tr>
-                <tr>
+                <tr id="mob-upgrades">
                   <td>
                     <img src={UpgradesMob} alt="Hardware upgrades" loading="eager" />
                   </td>

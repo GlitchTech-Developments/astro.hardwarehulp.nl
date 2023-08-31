@@ -1,6 +1,23 @@
 ﻿import { LifePreserver, Search, Wrench } from "react-bootstrap-icons"
 
-const HomeContent = () => {
+interface HomeContentProps {
+  isMobile: boolean
+}
+
+interface LinkObject {
+  mobile: string
+  desktop: string
+}
+
+const HomeContent = ({ isMobile }: HomeContentProps) => {
+  const getLinkByDeviceType = ({ mobile, desktop }: LinkObject) => {
+    if (isMobile) {
+      return mobile
+    } else {
+      return desktop
+    }
+  }
+
   return (
     <>
       <section className="wrapper" style={{ paddingTop: "3rem" }}>

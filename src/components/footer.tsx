@@ -26,23 +26,27 @@ const Footer = () => {
             <div className="flex w-full items-center justify-center gap-4 align-middle">
               Whatsapp{" "}
               <a href="https://wa.me/31642981933">
-                <Whatsapp
-                  className="icon"
+                <figure
+                  className="icon animate-bounce hover:shadow-md"
                   style={{
                     color: "#ffa600",
                     fontSize: "35px",
                   }}
-                />
+                >
+                  <Whatsapp />
+                </figure>
               </a>
               E-mail{" "}
               <a href="mailto://jesse@hardwarehulp.nl">
-                <EnvelopeAt
-                  className="icon"
+                <figure
+                  className="icon animate-bounce hover:shadow-md"
                   style={{
                     color: "#ffa600",
                     fontSize: "35px",
                   }}
-                />
+                >
+                  <EnvelopeAt />
+                </figure>
               </a>
             </div>
           </div>
@@ -71,11 +75,28 @@ const Footer = () => {
                     fontSize: "13px",
                   }}
                 >
-                  Kvk: <span>81511515</span>
+                  Kvk:{" "}
+                  <span
+                    id="kvk-display"
+                    class="blur-[3px] hover:blur-0"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      const kvk = document.getElementById("kvk-display")
+                      if (kvk) {
+                        kvk.classList.remove("blur-[3px]")
+                        kvk.classList.add("hover:blur-0")
+                      }
+                    }}
+                  >
+                    81511515
+                  </span>
                   <br />
                   IBAN: NL15 ABNA 0884 2883 74
                   <br />
-                  Tel: <a href="https://wa.me/31642981933">+31 6 42 98 1933</a>
+                  Tel:{" "}
+                  <a href="https://wa.me/31642981933" data-astro-reload>
+                    +31 6 42 98 1933
+                  </a>
                 </p>
               </div>
             </section>
@@ -85,7 +106,7 @@ const Footer = () => {
                 <a href="/">Hoofdpagina</a>
                 <a href="/diensten">Diensten</a>
                 <a href="/tarieven">Tarieven</a>
-                <a rel="canonical" href="https://hhhost.nl">
+                <a rel="canonical" href="https://hhhost.nl" data-astro-reload>
                   Hosting
                 </a>
               </div>
@@ -100,7 +121,9 @@ const Footer = () => {
                     onMouseEnter={() => changeIconHoverEffect("ig-icon", "add")}
                     onMouseLeave={() => changeIconHoverEffect("ig-icon", "remove")}
                     onClick={() => changeIconHoverEffect("ig-icon", "add")}
+                    data-astro-reload
                   >
+                    {/** @ts-ignore */}
                     <Instagram id="ig-icon" className="icon mb-1" />
                     <span>Instagram</span>
                   </a>
@@ -112,7 +135,9 @@ const Footer = () => {
                     onMouseEnter={() => changeIconHoverEffect("fb-icon", "add")}
                     onMouseLeave={() => changeIconHoverEffect("fb-icon", "remove")}
                     onClick={() => changeIconHoverEffect("fb-icon", "add")}
+                    data-astro-reload
                   >
+                    {/** @ts-ignore */}
                     <Facebook id="fb-icon" className="icon mb-1" />
                     Facebook
                   </a>
@@ -124,7 +149,9 @@ const Footer = () => {
                     onMouseEnter={() => changeIconHoverEffect("li-icon", "add")}
                     onMouseLeave={() => changeIconHoverEffect("li-icon", "remove")}
                     onClick={() => changeIconHoverEffect("li-icon", "add")}
+                    data-astro-reload
                   >
+                    {/** @ts-ignore */}
                     <Linkedin id="li-icon" className="icon mb-1" />
                     Linkedin
                   </a>

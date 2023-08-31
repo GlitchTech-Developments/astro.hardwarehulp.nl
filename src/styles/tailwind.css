@@ -291,10 +291,10 @@ sup {
   @apply relative top-[-0.5rem] text-[0.8rem];
 }
 blockquote {
-  @apply mx-0 mb-8 mt-0 border-l-[rgba(0,0,0,0.25)] border-l-[solid] py-4 pl-8 pr-0 italic;
+  @apply mx-0 mb-8 mt-0 border-l-[rgba(0,0,0,0.25)] py-4 pl-8 pr-0 italic;
 }
 code {
-  @apply mx-1 my-0 rounded border-[rgba(0,0,0,0.25)] border-[solid] px-[0.65rem] py-1 text-[0.9rem] [background:rgba(0,0,0,0.075)] [font-family:"Courier_New",monospace];
+  @apply mx-1 my-0 rounded border-[rgba(0,0,0,0.25)] px-[0.65rem] py-1 text-[0.9rem] [background:rgba(0,0,0,0.075)] [font-family:"Courier_New",monospace];
 }
 pre {
   @apply mx-0 mb-8 mt-0 text-[0.9rem] [font-family:"Courier_New",monospace] [-webkit-overflow-scrolling:touch];
@@ -303,7 +303,7 @@ pre code {
   @apply block overflow-x-auto px-6 py-4 leading-[1.75];
 }
 hr {
-  @apply mx-0 my-8 border-0 border-b-[rgba(0,0,0,0.25)] border-b-[solid];
+  @apply mx-0 my-8 border-0 border-b-[rgba(0,0,0,0.25)];
 }
 hr.major {
   @apply mx-0 my-16;
@@ -422,7 +422,7 @@ input[type="search"],
 input[type="url"],
 select,
 textarea {
-  @apply block w-full appearance-none rounded border-[none] border-[rgba(0,0,0,0.25)] border-[solid] bg-[rgba(0,0,0,0.075)] px-4 py-0 text-inherit no-underline [-moz-appearance:none] [-ms-appearance:none] [-webkit-appearance:none] [outline:0];
+  @apply block w-full appearance-none rounded border-[rgba(0,0,0,0.25)] bg-[rgba(0,0,0,0.075)] px-4 py-0 text-inherit no-underline [-moz-appearance:none] [-ms-appearance:none] [-webkit-appearance:none] [outline:0];
 }
 input[type="text"]:invalid,
 input[type="password"]:invalid,
@@ -467,7 +467,7 @@ input[type="radio"] + label {
 }
 input[type="checkbox"] + label:before,
 input[type="radio"] + label:before {
-  @apply absolute left-0 top-[-0.1625rem] inline-block h-[1.95rem] w-[1.95rem] rounded border-[rgba(0,0,0,0.25)] border-[solid] text-center font-[normal] normal-case not-italic leading-[1.86875rem] content-[""] [background:rgba(0,0,0,0.075)] [-moz-osx-font-smoothing:grayscale] [-webkit-font-smoothing:antialiased] [font-family:FontAwesome];
+  @apply absolute left-0 top-[-0.1625rem] inline-block h-[1.95rem] w-[1.95rem] rounded border-[rgba(0,0,0,0.25)] text-center font-[normal] normal-case not-italic leading-[1.86875rem] content-[""] [background:rgba(0,0,0,0.075)] [-moz-osx-font-smoothing:grayscale] [-webkit-font-smoothing:antialiased] [font-family:FontAwesome];
 }
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
@@ -535,7 +535,7 @@ ul.alt {
   @apply pl-0 [list-style:none];
 }
 ul.alt li {
-  @apply border-t-[rgba(0,0,0,0.25)] border-t-[solid] px-0 py-3 first:border-t-0 first:pt-0 last:pb-0;
+  @apply border-t-[rgba(0,0,0,0.25)] px-0 py-3 first:border-t-0 first:pt-0 last:pb-0;
 }
 dl {
   @apply mx-0 mb-8 mt-0;
@@ -552,7 +552,7 @@ dl dd {
   @apply overflow-x-auto [-webkit-overflow-scrolling:touch];
 }
 table tbody tr {
-  @apply border-x-0 border-[rgba(0,0,0,0.25)] border-[solid];
+  @apply border-x-0 border-[rgba(0,0,0,0.25)];
 }
 table td {
   @apply p-3;
@@ -561,16 +561,16 @@ table th {
   @apply px-3 pb-3 pt-0 text-left text-[0.9rem] font-semibold text-[#555555];
 }
 table thead {
-  @apply border-b-[rgba(0,0,0,0.25)] border-b-[solid];
+  @apply border-b-[rgba(0,0,0,0.25)];
 }
 table tfoot {
-  @apply border-t-[rgba(0,0,0,0.25)] border-t-[solid];
+  @apply border-t-[rgba(0,0,0,0.25)];
 }
 table.alt {
   @apply border-separate;
 }
 table.alt tbody tr td {
-  @apply border-l-0 border-t-0 border-[rgba(0,0,0,0.25)] border-[solid] first:border-l;
+  @apply border-l-0 border-t-0 border-[rgba(0,0,0,0.25)]  first:border-l;
 }
 table.alt tbody tr:first-child td {
   @apply border-t;
@@ -609,7 +609,7 @@ table tbody tr:nth-child(2n + 1) {
   @apply w-[calc(33.3333333333%_+_-0.5rem)];
 }
 .highlights .content {
-  @apply h-full rounded p-12 text-center shadow-[0px_0px_4px_1px_rgba(0,0,0,0.025)] shadow-[4px_4px_8px_4px_rgba(255,255,255,0.025)] [background:#ffffff] [background:#ffffff] hover:shadow-[4px_4px_8px_4px_rgba(0,149,101,0.125)] hover:[background:#ffffff];
+  @apply h-full rounded p-12 text-center shadow-[0px_0px_4px_1px_rgba(0,0,0,0.025)] [background:#ffffff] hover:shadow-[4px_4px_8px_4px_rgba(0,149,101,0.125)] hover:[background:#ffffff];
 }
 .highlights .content .icon {
   @apply mb-4 text-[5rem];
@@ -618,11 +618,11 @@ table tbody tr:nth-child(2n + 1) {
   @apply mb-0;
 }
 .btnTrus {
-  @apply mb-5 border border-solid border-[rgba(0,0,0,0.25)] bg-[rgba(0,0,0,0.5)] px-4 py-3 text-[#ffa600] no-underline hover:border hover:border-solid hover:border-[#ffa600] hover:text-[#ffa600];
+  @apply mb-5 border border-[rgba(0,0,0,0.25)] bg-[rgba(0,0,0,0.5)] px-4 py-3 text-[#ffa600] no-underline hover:border hover:border-[#ffa600] hover:text-[#ffa600];
 }
 @media screen and (max-width: 980px) {
   .highlights > * {
-    @apply w-6/12 w-[calc(33.3333333333%_+_0.6666666667rem)] w-[calc(50%_+_1rem)] p-4 p-4;
+    @apply w-6/12 p-4;
   }
   .highlights > :nth-child(-n + 3) {
     @apply pt-4;
@@ -2459,13 +2459,13 @@ body.is-preload #banner:before {
   @apply text-[#ffa600];
 }
 #footer .content {
-  @apply flex [display:-moz-flex] [display:-ms-flex] [display:-webkit-flex];
+  @apply flex;
 }
 #footer .content section {
   @apply w-3/12 first:w-6/12 first:pr-16 last:pl-16;
 }
 #footer .copyright {
-  @apply border-t border-solid px-0 py-8 text-center text-[0.8rem] text-gray-200;
+  @apply border-t px-0 py-8 text-center text-[0.8rem] text-gray-200;
 }
 @media screen and (max-width: 1280px) {
   #footer {
@@ -2508,7 +2508,7 @@ body.is-preload #banner:before {
   @apply no-underline [-webkit-tap-highlight-color:rgba(0,0,0,0)] before:my-0 before:ml-0 before:mr-2 before:font-[normal] before:normal-case before:not-italic before:content-["\f0c9"] before:[-moz-osx-font-smoothing:grayscale] before:[-webkit-font-smoothing:antialiased] before:[font-family:FontAwesome];
 }
 #header > nav > a + a[href="#menu"]:last-child {
-  @apply ml-2 border-l-[rgba(255,255,255,0.25)] border-l-[solid] pl-5;
+  @apply ml-2 border-l-[rgba(255,255,255,0.25)] pl-5;
 }
 @media screen and (max-width: 736px) {
   #header > nav > a {
@@ -2802,7 +2802,7 @@ body.is-preload #banner:before {
   @apply p-0;
 }
 #menu > ul.links > li > a {
-  @apply block border-0 border-t-[rgba(255,255,255,0.25)] border-t-[solid] leading-[3.5rem] text-inherit no-underline hover:text-white;
+  @apply block border-0 border-t-[rgba(255,255,255,0.25)] leading-[3.5rem] text-inherit no-underline hover:text-white;
 }
 #menu > ul.links > li:first-child > a {
   @apply border-t-0;
@@ -2830,10 +2830,10 @@ body.is-menu-visible #menu {
   @apply block h-[95%] w-auto py-[0.35rem] pl-0;
 }
 .borders {
-  @apply border-x-[0.5px] border-solid border-l-[rgba(255,166,0,0.5)] border-r-[rgba(0,149,101,0.5)] shadow-[15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)] [-moz-box-shadow:15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)] [-o-box-shadow:15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)] [-webkit-box-shadow:15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)];
+  @apply border-x-[0.5px] border-gray-400 border-l-[rgba(255,166,0,0.5)] border-r-[rgba(0,149,101,0.5)] shadow-[15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)] [-moz-box-shadow:15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)] [-o-box-shadow:15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)] [-webkit-box-shadow:15px_0_15px_-6px_rgba(0,149,101,0.5),-12px_0_8px_-4px_rgba(255,166,0,0.5)];
 }
 .box-diensten {
-  @apply m-0 flex w-[50%px] flex-row border-[5px] border-solid border-[gray] p-2.5;
+  @apply m-0 flex w-[50%px] flex-row border-[5px] border-gray-400 p-2.5;
 }
 .btn-highlights {
   @apply cursor-pointer;

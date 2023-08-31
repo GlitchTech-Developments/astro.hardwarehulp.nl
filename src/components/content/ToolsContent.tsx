@@ -22,7 +22,7 @@
                         Algemene toolkit voor reparatie en testing van computers en laptops.
                       </td>
                       <td>
-                        <a download href="/downloads/HHK-WinRepair.7z">
+                        <a download href="/downloads/HHK-WinRepair.7z" data-astro-reload>
                           Download
                         </a>
                       </td>
@@ -46,6 +46,7 @@
                 href="https://freetools.seobility.net/en/seocheck/astro.hardwarehulp.nl"
                 target="_blank"
                 rel="noreferrer"
+                data-astro-reload
               >
                 <img
                   src="https://freetools.seobility.net/widget/widget.png?url=astro.hardwarehulp.nl"
