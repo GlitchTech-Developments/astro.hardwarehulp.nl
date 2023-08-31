@@ -1,5 +1,12 @@
-﻿interface HeaderProps {
+﻿import { useEffect, useState } from "react"
+
+interface HeaderProps {
   currentPage: string
+}
+
+interface LinkStyle {
+  linkHref: string
+  linkStyle: React.CSSProperties
 }
 
 const Header = ({ currentPage }: HeaderProps) => {
@@ -23,6 +30,53 @@ const Header = ({ currentPage }: HeaderProps) => {
     }
   }
 
+  const [linkStyles, setLinkStyle] = useState<LinkStyle[]>([
+    {
+      linkHref: "/",
+      linkStyle: linkStyle("/"),
+    },
+    {
+      linkHref: "/diensten",
+      linkStyle: linkStyle("/diensten"),
+    },
+    {
+      linkHref: "/tarieven",
+      linkStyle: linkStyle("/tarieven"),
+    },
+  ])
+
+  const getLinkStyleFromSignal = (linkHref: string) => {
+    const linkStyle = linkStyles.find((linkStyle) => linkStyle.linkHref === linkHref)
+
+    if (linkStyle) {
+      return linkStyle.linkStyle
+    } else {
+      return {} as React.CSSProperties
+    }
+  }
+
+  const updateLinkStyles = () => {
+    setLinkStyle([
+      {
+        linkHref: "/",
+        linkStyle: linkStyle("/"),
+      },
+      {
+        linkHref: "/diensten",
+        linkStyle: linkStyle("/diensten"),
+      },
+      {
+        linkHref: "/tarieven",
+        linkStyle: linkStyle("/tarieven"),
+      },
+    ])
+  }
+
+  useEffect(() => {
+    updateLinkStyles()
+    window.addEventListener("astro:after-swap", () => updateLinkStyles())
+  }, [])
+
   return (
     <header id="header">
       <a className="logo no-select" href="/">
@@ -36,7 +90,12 @@ const Header = ({ currentPage }: HeaderProps) => {
         />
       </a>
       <nav className="no-select font-semibold" style={{ color: "rgba(255,255,255, 0.85)" }}>
-        <a className="nav-link" rel="prefetch-intent" href="/" style={{ ...linkStyle("/") }}>
+        <a
+          className="nav-link"
+          rel="prefetch-intent"
+          href="/"
+          style={{ ...getLinkStyleFromSignal("/") }}
+        >
           {" "}
           Home
         </a>
@@ -44,7 +103,7 @@ const Header = ({ currentPage }: HeaderProps) => {
           className="nav-link"
           rel="prefetch-intent"
           href="/diensten"
-          style={{ ...linkStyle("/diensten") }}
+          style={{ ...getLinkStyleFromSignal("/diensten") }}
         >
           {" "}
           Diensten
@@ -53,7 +112,7 @@ const Header = ({ currentPage }: HeaderProps) => {
           className="nav-link"
           rel="prefetch-intent"
           href="/tarieven"
-          style={{ ...linkStyle("/tarieven") }}
+          style={{ ...getLinkStyleFromSignal("/tarieven") }}
         >
           {" "}
           Tarieven
