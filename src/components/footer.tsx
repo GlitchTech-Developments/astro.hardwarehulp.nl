@@ -74,22 +74,9 @@ const Footer = () => {
                     fontFamily: "Arial, Helvetica, sans-serif",
                     fontSize: "13px",
                   }}
+                  class="select-none"
                 >
-                  Kvk:{" "}
-                  <span
-                    id="kvk-display"
-                    class="blur-[3px] hover:blur-0"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      const kvk = document.getElementById("kvk-display")
-                      if (kvk) {
-                        kvk.classList.remove("blur-[3px]")
-                        kvk.classList.add("hover:blur-0")
-                      }
-                    }}
-                  >
-                    81511515
-                  </span>
+                  Kvk: <span id="kvk-display">81511515</span>
                   <br />
                   IBAN: NL15 ABNA 0884 2883 74
                   <br />
