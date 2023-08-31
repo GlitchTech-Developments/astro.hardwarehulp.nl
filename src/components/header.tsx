@@ -21,7 +21,7 @@ const Header = ({ currentPage }: HeaderProps) => {
       } else {
         return {} as React.CSSProperties
       }
-    } else if (currentPage === linkHref) {
+    } else if (currentPage === linkHref && typeof window === "undefined") {
       return {
         color: "rgba(255,255,255, 1)",
         textDecoration: "underline",
