@@ -14,7 +14,9 @@ export default defineConfig({
     imagesConfig: {
       sizes: [180, 320, 640, 1280],
       imageService: true,
+      minimumCacheTTL: 2592000,
     },
+    minimumCacheTTL: 2592000,
   }),
   compressHTML: true,
   image: {

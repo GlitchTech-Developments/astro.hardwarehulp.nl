@@ -33,6 +33,7 @@ const Footer = () => {
                     fontSize: "35px",
                   }}
                 >
+                  <span className="sr-only">Whatsapp</span>
                   <Whatsapp />
                 </figure>
               </a>
@@ -45,6 +46,7 @@ const Footer = () => {
                     fontSize: "35px",
                   }}
                 >
+                  <span className="sr-only">Email</span>
                   <EnvelopeAt />
                 </figure>
               </a>
