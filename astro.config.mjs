@@ -5,10 +5,14 @@ import vercel from "@astrojs/vercel/static"
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  integrations: [preact({ compat: true })],
+  integrations: [
+    preact({
+      compat: true,
+    }),
+  ],
   adapter: vercel({
     imagesConfig: {
-      sizes: [320, 640, 1280],
+      sizes: [180, 320, 640, 1280],
       imageService: true,
     },
   }),

@@ -84,8 +84,8 @@ const Header = ({ currentPage }: HeaderProps) => {
           id="header-icon"
           src={"/img/logo.webp"}
           alt="Logo Hardwarehulp"
-          height={70}
-          width={70}
+          height={28}
+          width={110}
           loading="eager"
         />
       </a>

@@ -12,9 +12,6 @@ dependencies:
   '@fontsource/raleway':
     specifier: ^5.0.8
     version: 5.0.8
-  '@preact/signals':
-    specifier: ^1.2.1
-    version: 1.2.1(preact@10.17.1)
   astro:
     specifier: ^3.0.3
     version: 3.0.3
@@ -842,6 +839,7 @@ packages:
 
   /@preact/signals-core@1.4.0:
     resolution: {integrity: sha512-5iYoZBhELLIhUQceZI7sDTQWPb+xcVSn2qk8T/aNl/VMh+A4AiPX9YRSh4XO7fZ6pncrVxl1Iln82poVqYVbbw==}
+    dev: true
 
   /@preact/signals@1.2.1(preact@10.17.1):
     resolution: {integrity: sha512-hRPvp1C2ooDzOHqfnhdpHgoIFDbYFAXLhoid3+jSItuPPD/J0r/UsiWKv/8ZO/oEhjRaP0M5niuRYsWqmY2GEA==}
@@ -850,6 +848,7 @@ packages:
     dependencies:
       '@preact/signals-core': 1.4.0
       preact: 10.17.1
+    dev: true
 
   /@prefresh/babel-plugin@0.5.0:
     resolution: {integrity: sha512-joAwpkUDwo7ZqJnufXRGzUb+udk20RBgfA8oLPBh5aJH2LeStmV1luBfeJTztPdyCscC2j2SmZ/tVxFRMIxAEw==}
