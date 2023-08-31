@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config"
 import preact from "@astrojs/preact"
-// import vercel from "@astrojs/vercel/static"
+import vercel from "@astrojs/vercel/static"
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,14 +10,14 @@ export default defineConfig({
       compat: true,
     }),
   ],
-  // adapter: vercel({
-  //   imagesConfig: {
-  //     sizes: [180, 320, 640, 1280],
-  //     imageService: true,
-  //     minimumCacheTTL: 2592000,
-  //   },
-  //   minimumCacheTTL: 2592000,
-  // }),
+  adapter: vercel({
+    imagesConfig: {
+      sizes: [180, 320, 640, 1280],
+      imageService: true,
+      minimumCacheTTL: 2592000,
+    },
+    minimumCacheTTL: 2592000,
+  }),
   compressHTML: true,
   image: {
     service: {
