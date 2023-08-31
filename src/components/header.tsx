@@ -1,4 +1,19 @@
-﻿const Header = () => {
+﻿interface HeaderProps {
+  currentPage: string
+}
+
+const Header = ({ currentPage }: HeaderProps) => {
+  const linkStyle = (linkHref: string) => {
+    if (currentPage === linkHref) {
+      return {
+        color: "rgba(255,255,255, 1)",
+        textDecoration: "underline",
+      } as React.CSSProperties
+    } else {
+      return {} as React.CSSProperties
+    }
+  }
+
   return (
     <header id="header">
       <a className="logo no-select" href="/">
@@ -12,15 +27,25 @@
         />
       </a>
       <nav className="no-select font-semibold" style={{ color: "rgba(255,255,255, 0.85)" }}>
-        <a className="nav-link" rel="canonical" href="/">
+        <a className="nav-link" rel="prefetch-intent" href="/" style={{ ...linkStyle("/") }}>
           {" "}
           Home
         </a>
-        <a className="nav-link" rel="canonical" href="/diensten">
+        <a
+          className="nav-link"
+          rel="prefetch-intent"
+          href="/diensten"
+          style={{ ...linkStyle("/diensten") }}
+        >
           {" "}
           Diensten
         </a>
-        <a className="nav-link" rel="canonical" href="/tarieven">
+        <a
+          className="nav-link"
+          rel="prefetch-intent"
+          href="/tarieven"
+          style={{ ...linkStyle("/tarieven") }}
+        >
           {" "}
           Tarieven
         </a>

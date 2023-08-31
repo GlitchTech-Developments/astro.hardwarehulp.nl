@@ -6,6 +6,10 @@
   width: device-width;
 }
 
+:root {
+  --font-Raleway: "Raleway", Arial, Helvetica, sans-serif;
+}
+
 @media screen and (max-width: 480px) {
   html,
   body {
@@ -170,7 +174,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  @apply content-[""] content-none;
+  @apply content-[""];
 }
 table {
   @apply mx-0 mb-8 mt-0 w-full border-collapse border-spacing-0;
@@ -207,7 +211,7 @@ body,
 input,
 select,
 textarea {
-  @apply text-base font-normal leading-[1.65] [font-family:"Raleway",Arial,Helvetica,sans-serif];
+  @apply font-Raleway text-base font-normal leading-[1.65];
 }
 a {
   @apply text-[#ffa600] underline transition-[color] duration-[0.2s] ease-[ease-in-out] [-moz-transition:color_0.2s_ease-in-out] [-ms-transition:color_0.2s_ease-in-out] [-webkit-transition:color_0.2s_ease-in-out] hover:no-underline;

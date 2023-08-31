@@ -3,7 +3,7 @@
   desc: string
 }
 
-const Banner: React.FC<BannerProps> = ({ title, desc }) => {
+const Banner = ({ title, desc }: BannerProps) => {
   return (
     <section id="banner">
       <div className="inner" style={{ opacity: 1 }}>

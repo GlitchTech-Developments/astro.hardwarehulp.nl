@@ -1,5 +1,8 @@
 ---
 import "@/styles/tailwind.css"
+import "@fontsource/raleway"
+
+import { ViewTransitions } from "astro:transitions"
 
 import MetaHead from "@/components/router-head/meta-head.astro"
 import PrefetchHead from "@/components/router-head/prefetch-head.astro"
@@ -8,6 +11,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 const { title, desc } = Astro.props
+const { pathname } = Astro.url
 ---
 
 <html lang="nl-NL">
@@ -23,9 +27,10 @@ const { title, desc } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <MetaHead />
     <PrefetchHead />
+    <ViewTransitions transition:animate="fade" fallback="swap" />
   </head>
   <body>
-    <Header />
+    <Header currentPage={pathname} />
     <slot />
     <Footer client:visible />
   </body>

@@ -15,10 +15,16 @@ const HomeContent = () => {
 
           <div className="highlights">
             <section>
-              <a href="/diensten#com-mobile" style={{ textDecoration: "none" }}>
+              <a
+                href="/diensten#com-mobile"
+                rel="prefetch-intent"
+                style={{ textDecoration: "none" }}
+              >
                 <div className="content btn-highlights">
                   <span className="flex w-full flex-col items-center justify-center gap-4">
-                    <Wrench className="icon" style={{ color: "#ffa600" }} />
+                    <figure className="icon" style={{ color: "#ffa600" }}>
+                      <Wrench />
+                    </figure>
                     <h3>Computer op maat</h3>
                   </span>
                   <p className="text-gray-700">
@@ -29,10 +35,16 @@ const HomeContent = () => {
               </a>
             </section>
             <section>
-              <a style={{ textDecoration: "none" }} href="/diensten#com-ondersteuning">
+              <a
+                style={{ textDecoration: "none" }}
+                rel="prefetch-intent"
+                href="/diensten#com-ondersteuning"
+              >
                 <div className="content btn-highlights">
                   <span className="flex w-full flex-col items-center justify-center gap-4">
-                    <LifePreserver className="icon" style={{ color: "#ffa600" }} />
+                    <figure className="icon" style={{ color: "#ffa600" }}>
+                      <LifePreserver />
+                    </figure>
                     <h3>Ondersteuning</h3>
                   </span>
                   <p className="text-gray-700">
@@ -43,10 +55,16 @@ const HomeContent = () => {
               </a>
             </section>
             <section>
-              <a href="/diensten#com-advies" style={{ textDecoration: "none" }}>
+              <a
+                href="/diensten#com-advies"
+                rel="prefetch-intent"
+                style={{ textDecoration: "none" }}
+              >
                 <div className="content btn-highlights">
                   <span className="flex w-full flex-col items-center justify-center gap-4">
-                    <Search className="icon" style={{ color: "#ffa600" }} />
+                    <figure className="icon" style={{ color: "#ffa600" }}>
+                      <Search />
+                    </figure>
                     <h3>Aankoop advies</h3>
                   </span>
                   <p className="text-gray-700">
@@ -103,12 +121,13 @@ const HomeContent = () => {
                 <a
                   href="https://www.linkedin.com/in/jesse-koldewijn-5914531a3/"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer prefetch-intent"
                   style={{
                     textDecoration: "none",
                     color: "#000",
                     fontWeight: "bold",
                   }}
+                  data-astro-reload
                 >
                   Jesse Koldewijn
                 </a>
@@ -119,7 +138,8 @@ const HomeContent = () => {
                     textDecoration: "none",
                     color: "black",
                   }}
-                  rel="noreferrer"
+                  rel="noreferrer prefetch-intent"
+                  data-astro-reload
                 >
                   Hardwarehulp
                 </a>
@@ -148,10 +168,11 @@ const HomeContent = () => {
             }}
           >
             <a
-              rel="canonical noreferrer"
+              rel="canonical noreferrer prefetch-intent"
               href="https://nl.trustpilot.com/review/hardwarehulp.nl"
               className="btnTrus"
               target="_blank"
+              data-astro-reload
             >
               Bekijk mijn pagina
             </a>
@@ -161,6 +182,7 @@ const HomeContent = () => {
               className="btnTrus"
               target="_blank"
               rel="noreferrer"
+              data-astro-reload
             >
               Plaats een review
             </a>

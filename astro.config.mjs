@@ -1,15 +1,21 @@
 import { defineConfig } from "astro/config"
-
-import react from "@astrojs/react"
-import vercel from "@astrojs/vercel/serverless"
+import preact from "@astrojs/preact"
+import vercel from "@astrojs/vercel/static"
 
 // https://astro.build/config
 export default defineConfig({
-  output: "hybrid",
-  integrations: [react()],
-  adapter: vercel(),
+  output: "static",
+  integrations: [preact({ compat: true })],
+  adapter: vercel({
+    imagesConfig: {
+      sizes: [320, 640, 1280],
+      imageService: true,
+    },
+  }),
   compressHTML: true,
   image: {
-    service: { entrypoint: "astro/assets/services/sharp" },
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+    },
   },
 })
