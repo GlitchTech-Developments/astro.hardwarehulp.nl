@@ -1,23 +1,8 @@
 ﻿import { LifePreserver, Search, Wrench } from "react-bootstrap-icons"
 
-interface HomeContentProps {
-  isMobile: boolean
-}
+import Me from "@/img/Jesse.webp"
 
-interface LinkObject {
-  mobile: string
-  desktop: string
-}
-
-const HomeContent = ({ isMobile }: HomeContentProps) => {
-  const getLinkByDeviceType = ({ mobile, desktop }: LinkObject) => {
-    if (isMobile) {
-      return mobile
-    } else {
-      return desktop
-    }
-  }
-
+const HomeContent = () => {
   return (
     <>
       <section className="wrapper" style={{ paddingTop: "3rem" }}>
@@ -127,10 +112,10 @@ const HomeContent = ({ isMobile }: HomeContentProps) => {
                   }}
                 >
                   <img
-                    src={"/img/Jesse.webp"}
+                    src={Me.src}
                     alt="Jesse Koldewijn, Eigenaar Hardwarehulp"
-                    height={85}
-                    width={85}
+                    height={Me.height}
+                    width={Me.width}
                   />
                 </div>
               </div>

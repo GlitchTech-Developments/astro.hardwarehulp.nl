@@ -1,4 +1,5 @@
 ﻿import { useEffect, useState } from "react"
+import Logo from "@/img/logo.webp"
 
 interface HeaderProps {
   currentPage: string
@@ -82,10 +83,10 @@ const Header = ({ currentPage }: HeaderProps) => {
       <a className="logo no-select" href="/">
         <img
           id="header-icon"
-          src={"/img/logo.webp"}
+          src={Logo.src}
           alt="Logo Hardwarehulp"
-          height={28}
-          width={110}
+          height={Logo.height}
+          width={Logo.width}
           loading="eager"
         />
       </a>
