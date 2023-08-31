@@ -29,7 +29,7 @@ const { pathname } = Astro.url
     <PrefetchHead />
     <ViewTransitions transition:animate="fade" fallback="swap" />
   </head>
-  <body class="swup-transition-fade">
+  <body>
     <Header currentPage={pathname} client:idle />
     <slot />
     <Footer client:visible />
