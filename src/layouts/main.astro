@@ -30,7 +30,7 @@ const { pathname } = Astro.url
     <ViewTransitions transition:animate="fade" fallback="swap" />
   </head>
   <body>
-    <Header currentPage={pathname} />
+    <Header currentPage={pathname} client:idle />
     <slot />
     <Footer client:visible />
   </body>

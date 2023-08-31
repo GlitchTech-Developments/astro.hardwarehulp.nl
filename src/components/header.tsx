@@ -4,7 +4,16 @@
 
 const Header = ({ currentPage }: HeaderProps) => {
   const linkStyle = (linkHref: string) => {
-    if (currentPage === linkHref) {
+    if (typeof window !== "undefined") {
+      if (window.location.pathname === linkHref) {
+        return {
+          color: "rgba(255,255,255, 1)",
+          textDecoration: "underline",
+        } as React.CSSProperties
+      } else {
+        return {} as React.CSSProperties
+      }
+    } else if (currentPage === linkHref) {
       return {
         color: "rgba(255,255,255, 1)",
         textDecoration: "underline",
