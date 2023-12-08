@@ -6,8 +6,16 @@
   width: device-width;
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --font-Raleway: "Raleway", Arial, Helvetica, sans-serif;
+  --font-Raleway: "Raleway", Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 480px) {

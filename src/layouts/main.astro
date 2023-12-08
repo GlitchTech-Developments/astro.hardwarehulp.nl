@@ -1,6 +1,5 @@
 ---
 import "@/styles/tailwind.css"
-import "@fontsource/raleway"
 
 import { ViewTransitions } from "astro:transitions"
 
@@ -11,7 +10,6 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 const { title, desc } = Astro.props
-const { pathname } = Astro.url
 ---
 
 <html lang="nl-NL">
@@ -25,13 +23,20 @@ const { pathname } = Astro.url
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      href="/fonts/raleway-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <MetaHead />
     <PrefetchHead />
     <ViewTransitions transition:animate="fade" fallback="swap" />
   </head>
-  <body>
-    <Header />
+  <body class="font-Raleway">
+    <Header transition:name="header" />
     <slot />
-    <Footer client:visible />
+    <Footer client:visible transition:name="footer" />
   </body>
 </html>
